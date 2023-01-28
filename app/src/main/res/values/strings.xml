@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DSU Student Portal</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_favourites">Favourites</string>
+    <string name="title_addRecords">Add Records</string>
+    <string name="title_search">Search</string>
+    <string name="title_settings">Settings</string>
+</resources>
