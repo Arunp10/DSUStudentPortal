@@ -29,7 +29,7 @@ class SettingFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_search, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_settings, container, false)
         val News = view.findViewById(R.id.searchNews) as RecyclerView
 
         val SettingModel: SettingViewModal =
