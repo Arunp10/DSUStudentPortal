@@ -24,7 +24,7 @@ class SettingViewModal() : ViewModel() {
         }
         val newsApi = RetrofitHelper.getInstance().create(NewsAPI::class.java)
         val result =
-            newsApi.getNews("us", "1dbf08ceb411481a8f1b7800b3419523", pageSize, currentPage)
+            newsApi.getNews("us", "a55000c1839d466184f61ea2de3a4e33", pageSize, currentPage)
         if (result.body() != null) {
             val fetchedNews = result.body()!!.newsList
             _newsList.value!!.addAll(fetchedNews)
