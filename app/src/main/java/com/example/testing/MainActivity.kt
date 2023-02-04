@@ -13,7 +13,6 @@ import retrofit2.Call
 import retrofit2.Response
 import javax.security.auth.callback.Callback
 import kotlin.math.log
-import com.example.testing.News as News
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +20,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getNews()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -38,19 +36,4 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-}
-private fun getNews(){
-    val news= NewsService.newsInstance.getHeadlines("in",1)
-    news.enqueue(object:retrofit2.Callback<News>{
-        override fun onResponse(call: Call<News>, response: Response<News>) {
-            val news=response.body()
-            if(news!=null){
-                Log.d("DSUStudentPortal",news.toString())
-            }
-        }
-
-        override fun onFailure(call: Call<News>, t: Throwable) {
-            Log.d("DSUStudentPortal","Error",t)
-        }
-    })
 }
